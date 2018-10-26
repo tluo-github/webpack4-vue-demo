@@ -1,15 +1,13 @@
 <style>
-    *{color: red}
+    #myage{color: red}
 </style>
 
 <template>
-    <div  id="myage">我的年龄是{{age}}</div>
+    <div  id="myage">我的年龄是:{{value}}</div>
 </template>
 
 <script>
 export  default{
-    data () {
-        return {age:19}
-    }
+    props: ['value']
 }
 </script>
