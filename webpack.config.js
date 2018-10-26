@@ -1,5 +1,7 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-var webpack=require("webpack");
+const HtmlWebPackPlugin = require("html-webpack-plugin"); //html
+const VueLoaderPlugin = require('vue-loader/lib/plugin') //vue-loader
+
+const webpack=require("webpack");
 module.exports = {
     //定义入口
     entry: {
@@ -22,10 +24,19 @@ module.exports = {
                 use: {
                     loader: "babel-loader"
                 }
+            },
+            {   test:/\.vue$/,
+                use: {
+                    loader: "vue-loader"
+                }
+            },
+            {
+                test: /\.css$/,
+                use: ['vue-style-loader','css-loader']
             }
         ]
     },
-    //解决webpack 别名 vue ,没有就报错
+    //需引入 vue/dist/vue.js 给个别名 vue
     resolve: {
         alias: {
             vue: 'vue/dist/vue.js'
@@ -39,6 +50,8 @@ module.exports = {
             inject:'body',
             hash:true,
             chunks:["index"]
-        })
+        }),
+        new VueLoaderPlugin()
+
     ]
 }

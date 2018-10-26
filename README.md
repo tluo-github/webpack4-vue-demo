@@ -6,7 +6,7 @@ mkdir webpack4-vue-demo
 cd webpack4-vue-demo
 npm init -y
 npm install --save-dev webpack webpack-cli vue vue-loader html-webpack-plugin html-loader \
- webpack-dev-server vue-template-compiler html-loader
+ webpack-dev-server vue-template-compiler html-loader extract-text-webpack-plugin@next css-loader vue-style-loader
 ```
 # 注意
 
