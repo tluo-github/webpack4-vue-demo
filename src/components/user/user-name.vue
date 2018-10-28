@@ -1,0 +1,27 @@
+<style>
+</style>
+
+<template>
+    <div class="row">
+        <div>
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">用户名:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control"  v-model="username" :placeholder="placeholder">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        props:['placeholder'],
+        data: function () {
+            return {
+                username:""
+            }
+        }
+    }
+</script>
