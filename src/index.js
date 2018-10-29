@@ -8,8 +8,10 @@ import Vue from 'vue';
 
 import VueRouter from 'vue-router'
 import VueResource from "vue-resource";
+import luotao from './components/plugins/luotaoPlugin.js'
 Vue.use(VueRouter);
 Vue.use(VueResource);
+Vue.use(luotao);
 
 // 异步加载组件
 //第一种写法,代码文件不拆分
