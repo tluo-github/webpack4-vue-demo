@@ -13,6 +13,7 @@
             <username placeholder="输入你的用户名"></username>
             <userpass></userpass>
             <userarea></userarea>
+            <userfavs></userfavs>
             <usersubmit></usersubmit>
             <input type="button" value="父组件测试" v-on:click="show"/>
         </form>
@@ -24,6 +25,7 @@
     import usersubmit from "./user/user-submit.vue"
     import userpass from "./user/user-pass.vue"
     import userarea from "./user/user-area.vue"
+    import userfavs from "./user/user-favs.vue"
     export  default{
 
         mounted(){
@@ -61,7 +63,8 @@
             'username': username,
             'usersubmit': usersubmit,
             'userpass' : userpass,
-            'userarea' : userarea
+            'userarea' : userarea,
+            'userfavs' : userfavs
         }
     }
 </script>
