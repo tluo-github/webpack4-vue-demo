@@ -15,3 +15,6 @@ npm i img-loader url-loader file-loader --save-dev
 
 # v21
 npm install vue-router --save-dev
+
+# v22
+npm install vue-resource --save-dev
