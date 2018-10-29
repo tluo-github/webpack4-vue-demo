@@ -13,3 +13,5 @@ npm install --save-dev webpack webpack-cli vue vue-loader html-webpack-plugin ht
 
 npm i img-loader url-loader file-loader --save-dev
 
+# v21
+npm install vue-router --save-dev
