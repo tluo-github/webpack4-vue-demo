@@ -20,8 +20,15 @@ Vue.use(VueResource);
 // const userlogin=r=>{
 //     r(require('./components/user-login.vue'));
 // };
-//第三种写法、异步加载组件、代码文件拆分
-const userlogin = () => import('./components/user-login.vue');
+//第三种写法，组件异步加载、文件整合到vuecs.js中
+// const userlogin=r=>{
+//     require.ensure([],()=>{
+//         r(require("./components/user-login.vue"));
+//     },"vuecs")
+//
+// };
+//第四种写法、异步加载组件、代码文件拆分
+// const userlogin = () => import('./components/user-login.vue');
 const newslist = () => import('./components/news-list.vue');
 const newsdetail = () => import('./components/news-detail.vue');
 const pagenav = () => import('./components/page-nav.vue');

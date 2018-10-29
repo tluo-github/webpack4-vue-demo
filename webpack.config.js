@@ -10,7 +10,7 @@ module.exports = {
     //定义编译后位置
     output: {
         filename: '[name].js',
-        path: __dirname + '/dist'
+        path: __dirname + '/dist/js'
     },
     module: {
         rules: [
