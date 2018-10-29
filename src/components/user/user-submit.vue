@@ -13,7 +13,7 @@
     export default {
         methods:{
             test(){
-                alert(this.$parent.$refs.uname.$data.username);
+                alert(this.$parent.$data.username+'--' + this.$parent.$data.userpass);
             }
         }
     }
