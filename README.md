@@ -40,3 +40,8 @@ npm install  @babel/core babel-loader @babel/preset-env  @babel/plugin-syntax-dy
 }
 ```
  @ babel / preset-env配置的模块选项设置为false的原因是因为我们希望webpack为我们处理模块捆绑。
+
+
+# v27  
+
+npm install vuex --save-dev  

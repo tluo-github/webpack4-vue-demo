@@ -9,9 +9,40 @@ import Vue from 'vue';
 import VueRouter from 'vue-router'
 import VueResource from "vue-resource";
 import luotao from './components/plugins/luotaoPlugin.js'
+import Vuex from "vuex";
+import UserModule from './store/modules/UserModule'
+import NewsModule from './store/modules/NewsModule'
+
 Vue.use(VueRouter);
 Vue.use(VueResource);
 Vue.use(luotao);
+Vue.use(Vuex);
+
+const vuex_store=new Vuex.Store({
+    modules: {
+        users: UserModule,
+        news: NewsModule
+    }
+    // state:{
+    //     user_name:"",
+    //     news_list:[]
+    // },
+    // mutations:{
+    //     showUserName(state)
+    //     {
+    //         alert(state.user_name)
+    //     }
+    // },
+    // getters: {
+    //
+    //     getNews: state => {
+    //         return state.news_list.filter(function (news) {
+    //             return !news.isdeleted;
+    //         })
+    //     }
+    // }
+
+});
 
 // 异步加载组件
 //第一种写法,代码文件不拆分
@@ -47,7 +78,8 @@ const routerConfig = new VueRouter({
 Vue.component('page-nav', pagenav);
 const myvue=new Vue({
     el:".container",
-    router:routerConfig
+    store:vuex_store, //状态管理器
+    router:routerConfig //路由配置
 });
 
 // const params = {
