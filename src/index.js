@@ -12,11 +12,15 @@ import luotao from './components/plugins/luotaoPlugin.js'
 import Vuex from "vuex";
 import UserModule from './store/modules/UserModule'
 import NewsModule from './store/modules/NewsModule'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
 Vue.use(luotao);
 Vue.use(Vuex);
+Vue.use(ElementUI);
+
 
 const vuex_store=new Vuex.Store({
     modules: {
@@ -65,13 +69,21 @@ const userlogin = () => import('./components/user-login.vue');
 const newslist = () => import('./components/news-list.vue');
 const newsdetail = () => import('./components/news-detail.vue');
 const pagenav = () => import('./components/page-nav.vue');
+const eltable = () => import('./components/el-table.vue');
+const elenav = () => import('./components/ele-nav.vue');
+const eleform = () => import('./components/ele-form.vue');
+const elesteps = () => import('./components/ele-steps.vue');
 
 const routerConfig = new VueRouter({
     routes:[
         { path: '/', component: userlogin },
         { path: '/news', component: newslist ,name:"newslist"},
         { path: '/news/:newsid', component: newsdetail ,name:"newsdetail"},
-        { path: '/login', component: userlogin ,name:"userlogin"}
+        { path: '/login', component: userlogin ,name:"userlogin"},
+        { path: '/eltable', component: eltable ,name:"userlogin"},
+        { path: '/elenav', component: elenav ,name:"elenav"},
+        { path: '/eleform', component: eleform ,name:"eleform"},
+        { path: '/elesteps', component: elesteps ,name:"elesteps"},
     ]
 });
 

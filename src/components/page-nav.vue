@@ -11,7 +11,10 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#/login">登录</a></li>
                     <li><a href="#/news">热点新闻</a></li>
-
+                    <li><a href="#/eltable">Element测试table</a></li>
+                    <li><a href="#/elenav">Element示例</a></li>
+                    <li><a href="#/eleform">Element-form-示例</a></li>
+                    <li><a href="#/elesteps">Element-elesteps-示例</a></li>
                 </ul>
 
             </div><!-- /.navbar-collapse -->

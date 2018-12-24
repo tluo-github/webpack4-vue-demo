@@ -45,3 +45,6 @@ npm install  @babel/core babel-loader @babel/preset-env  @babel/plugin-syntax-dy
 # v27  
 
 npm install vuex --save-dev  
+
+# v32 element-ui
+npm install style-loader  css-loader  file-loader element-ui  babel-plugin-component--save-dev  
